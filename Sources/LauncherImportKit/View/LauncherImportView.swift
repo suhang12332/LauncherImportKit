@@ -22,6 +22,7 @@ public struct LauncherImportView: View {
                 configuration.hostCallbacks?.handleSelection = viewModel.handleFolderSelection
                 configuration.hostCallbacks?.handleConfirm = viewModel.handleConfirm
                 configuration.hostCallbacks?.handleCancel = viewModel.handleCancel
+                configuration.hostCallbacks?.handleCleanup = viewModel.cleanup
                 viewModel.updateParentState()
             }
             .onDisappear { viewModel.cleanup() }

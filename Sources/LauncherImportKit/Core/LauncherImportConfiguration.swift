@@ -6,6 +6,7 @@ public final class LauncherImportHostCallbacks {
     public var handleSelection: ((Result<[URL], Error>) -> Void)?
     public var handleConfirm: (() -> Void)?
     public var handleCancel: (() -> Void)?
+    public var handleCleanup: (() -> Void)?
 
     public init() {}
 }
